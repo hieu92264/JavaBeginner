@@ -1,7 +1,6 @@
 package IOStream;
 
 import java.io.BufferedReader;
-import java.io.File;
 import java.io.FileInputStream;
 import java.io.InputStreamReader;
 
@@ -9,9 +8,8 @@ public class CountWord {
     public CountWord() {}
     public int countword(String path, String key) {
         int dem = 0;
-        File file = new File(path);
         try {
-            FileInputStream inputStream = new FileInputStream(file);
+            FileInputStream inputStream = new FileInputStream(path);
             BufferedReader reader = new BufferedReader(new InputStreamReader(inputStream));
             String line;
             while((line = reader.readLine()) != null) {
