@@ -10,7 +10,7 @@ public class Bai2 {
                 FileReader reader = new FileReader(file);
                 int c;
                 int count =0;
-                while((c = reader.read()) != -1 && count <= 100) {
+                while((c = reader.read()) != -1 || count <= 100) {
                     System.out.println((char)c);
                 }
                 reader.close();
